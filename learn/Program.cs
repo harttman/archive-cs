@@ -7,19 +7,11 @@ namespace learn
         static void Main(string[] args)
         {
             SetUtf();
-            /*
-             * double number = 1.33;
-             * Console.WriteLine(number);
-            */
+            string data;
 
-            /*
-             * char hello = 'привіт'
-             * Error: C1012
-             * Best:
-             */
-            char hello = 'h';
-            string helloOnUkr = "привіт";
-            Console.WriteLine(hello + " " + helloOnUkr);
+            data = Console.ReadLine();
+
+            Console.WriteLine("You typed: " + data);
         }
         static void SetUtf()
         { 
