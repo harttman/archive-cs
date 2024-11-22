@@ -6,9 +6,10 @@ namespace Program
 	{
 		static void Main(string[] args)
 		{
-			Console.Title = "Learn C#";
-			Console.WriteLine("Hello, world");
-			Console.ReadKey();
+			Console.OutputEncoding = System.Text.Encoding.UTF8;
+			Console.InputEncoding = System.Text.Encoding.UTF8;
+
+			Console.WriteLine("\t\t\t\t\t\tЧислові Типи");
 		}
 	}
 }
