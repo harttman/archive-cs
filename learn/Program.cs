@@ -5,12 +5,13 @@ namespace learn
     {
         static void Main(string[] args)
         {
-            setUtf();
-            int a;
-            a = 5;
-            Console.WriteLine(a);
+            SetUtf();
+            int a = 5;
+            int b = a + 10;
+            Console.WriteLine(a + 5);
+            Console.WriteLine(b + 5);
         }
-        static void setUtf()
+        static void SetUtf()
         { 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.InputEncoding = System.Text.Encoding.UTF8;
