@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace learn
 {
     class Program
@@ -7,16 +8,18 @@ namespace learn
         {
             SetUtf();
             /*
-             * bool variable = false;
-             * bool variable = true;
-             * ERROR: CS0128 - A local variable named 'variable' is already defined in this scope
-             */
-            // best:
+             * double number = 1.33;
+             * Console.WriteLine(number);
+            */
 
-            bool notTrue = false;
-            bool notFalse = false;
-            Console.WriteLine(notFalse);
-            Console.WriteLine(notTrue);
+            /*
+             * char hello = 'привіт'
+             * Error: C1012
+             * Best:
+             */
+            char hello = 'h';
+            string helloOnUkr = "привіт";
+            Console.WriteLine(hello + " " + helloOnUkr);
         }
         static void SetUtf()
         { 
