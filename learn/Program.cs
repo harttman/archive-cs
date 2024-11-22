@@ -6,10 +6,17 @@ namespace learn
         static void Main(string[] args)
         {
             SetUtf();
-            int a = 5;
-            int b = a + 10;
-            Console.WriteLine(a + 5);
-            Console.WriteLine(b + 5);
+            /*
+             * bool variable = false;
+             * bool variable = true;
+             * ERROR: CS0128 - A local variable named 'variable' is already defined in this scope
+             */
+            // best:
+
+            bool notTrue = false;
+            bool notFalse = false;
+            Console.WriteLine(notFalse);
+            Console.WriteLine(notTrue);
         }
         static void SetUtf()
         { 
