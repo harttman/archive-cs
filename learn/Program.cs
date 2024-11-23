@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 /*
  * Convert types
@@ -16,19 +17,29 @@ namespace learn
              * int ageInt = Convert.ToInt32(ageStr); 
              * value in age int : 16
              */
-            int number_one, number_two;
-            int result;
-            Console.WriteLine("----------");
-            Console.Write("Введіть перше число: ");
-            number_one = Convert.ToInt32(Console.ReadLine());
+            //int number_one, number_two;
+            //int result;
+            //Console.WriteLine("----------");
+            //Console.Write("Введіть перше число: ");
+            //number_one = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("----------");
-            Console.Write("Введіть друге число: ");
-            number_two = Convert.ToInt32(Console.ReadLine());
-            result = number_two + number_one;
+            //Console.WriteLine("----------");
+            //Console.Write("Введіть друге число: ");
+            //number_two = Convert.ToInt32(Console.ReadLine());
+            //result = number_two + number_one;
 
-            Console.WriteLine("----------");
-            Console.WriteLine("Перше число\t" + number_one + "| Друге число\t" + number_two+"| Результат\t"+result);
+            //Console.WriteLine("----------");
+            //Console.WriteLine("Перше число\t" + number_one + "| Друге число\t" + number_two+"| Результат\t"+result);
+
+            string doubleString = "11.3";
+            
+            NumberFormatInfo numberFormat = new NumberFormatInfo()
+            {
+                NumberDecimalSeparator = ".",
+            };
+
+            double a = Convert.ToDouble(doubleString, numberFormat);
+            Console.WriteLine(a);
         }
         static void SetUtf()
         { 
