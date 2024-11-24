@@ -12,34 +12,32 @@ namespace learn
         static void Main(string[] args)
         {
             SetUtf();
-            /*
-             * string ageStr = "16";
-             * int ageInt = Convert.ToInt32(ageStr); 
-             * value in age int : 16
-             */
-            //int number_one, number_two;
-            //int result;
-            //Console.WriteLine("----------");
-            //Console.Write("Введіть перше число: ");
-            //number_one = Convert.ToInt32(Console.ReadLine());
-
-            //Console.WriteLine("----------");
-            //Console.Write("Введіть друге число: ");
-            //number_two = Convert.ToInt32(Console.ReadLine());
-            //result = number_two + number_one;
-
-            //Console.WriteLine("----------");
-            //Console.WriteLine("Перше число\t" + number_one + "| Друге число\t" + number_two+"| Результат\t"+result);
-
-            string doubleString = "11.3";
-            
-            NumberFormatInfo numberFormat = new NumberFormatInfo()
+            string name;
+            int age = 0;
+            bool isStudent = false;
+            Console.WriteLine("Введите своё имя");
+            name = Console.ReadLine();
+            Console.WriteLine("Введите свой возраст");
+            try
             {
-                NumberDecimalSeparator = ".",
-            };
+                age = int.Parse(Console.ReadLine());
+                Console.WriteLine("Успешная конвертация.");
+            } catch (Exception)
+            {
+                Console.WriteLine("Чето пошло не так! Введете другие данные.");
+            }
+            Console.WriteLine("Вы студент? true/false");
+            try
+            {
+                isStudent = bool.Parse(Console.ReadLine());
+                Console.WriteLine("Успешная конвертация");
+            } catch (Exception)
+            {
+                Console.WriteLine("Надо ввести, либо true либо false.");
+            }
 
-            double a = Convert.ToDouble(doubleString, numberFormat);
-            Console.WriteLine(a);
+
+            Console.WriteLine("\n----------------------\nИмя: " + name + "\nВозраст: " + age + "\nСтудент?: "+isStudent);
         }
         static void SetUtf()
         { 
