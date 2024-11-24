@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Globalization;
 
 /*
- * Convert types
+ * Parse String 
  */
 
 namespace learn
@@ -12,32 +11,24 @@ namespace learn
         static void Main(string[] args)
         {
             SetUtf();
-            string name;
-            int age = 0;
-            bool isStudent = false;
-            Console.WriteLine("Введите своё имя");
-            name = Console.ReadLine();
-            Console.WriteLine("Введите свой возраст");
-            try
+            string data = ""; // default value: empty string
+            int pastringData; // no value
+
+            data = Console.ReadLine();
+            
+            bool result = int.TryParse(data, out pastringData); // TRY parse to int and get result (bool)
+            if(result)
             {
-                age = int.Parse(Console.ReadLine());
-                Console.WriteLine("Успешная конвертация.");
-            } catch (Exception)
+                Console.WriteLine("Success parse");
+            } else
             {
-                Console.WriteLine("Чето пошло не так! Введете другие данные.");
-            }
-            Console.WriteLine("Вы студент? true/false");
-            try
-            {
-                isStudent = bool.Parse(Console.ReadLine());
-                Console.WriteLine("Успешная конвертация");
-            } catch (Exception)
-            {
-                Console.WriteLine("Надо ввести, либо true либо false.");
+                Console.WriteLine("Error parse... type new data! Only number");
+                return; // if result false out program
             }
 
+            // if run else block, this not work.
+            Console.WriteLine(data + pastringData); // out console
 
-            Console.WriteLine("\n----------------------\nИмя: " + name + "\nВозраст: " + age + "\nСтудент?: "+isStudent);
         }
         static void SetUtf()
         { 
